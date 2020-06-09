@@ -58,6 +58,7 @@ img {
 }
 <!---->
 div.page {
+	padding: 0.1em;
 	box-shadow:0px 0px 5px;
     border:1px solid black;
 	position:relative;
@@ -71,4 +72,64 @@ div.page * {
 	margin-top: 0%;
 	margin-bottom: 0%;
 }
+pre.code {
+	font-size:1.3em;
+background-color:rgb(67,67,67);
+margin:1em;
+margin-left:1em; 
+width:auto;
+height: auto;
+max-height: 15em;
+color:white;
+overflow: scroll;
+}
+button {
+	outline:0;
+	border-radius: 0.1em;
+	background-color:white;
+	border-style:solid;
+	border-color:black;
+	border-size:0.1vh;
+	transform:translateY(-0.4vh);
+	box-shadow: 0vh 0.2vh 0.3vh black;
+	color:black;
+	font-weight: bold;
+	padding: 0.5% 0.3%;
+	transition: transform 0.5s;
+	transition: border-radius 0.2s;
+}
+button:hover {
+	outline:0;
+	background-color:white;
+	border-radius: 1em;
+	border-style:inset;
+	border-color:black;
+	border-size:0.1vh;
+	transform:translateY(-0.2vh);
+	transform:translateY(-0vh);
+	box-shadow: 0vh 0.2vh 0.3vh black;
+	color:black;
+	font-weight: bold;
+	padding: 0.5% 0.3%;
+	transition: transform 0.5s;
+	transition: border-radius 0.2s;
+}
+button:active {
+	outline:0;
+	background-color:white;
+	border-radius: 2.5em;
+	border-style:inset;
+	border-color:black;
+	border-width:0.1px;
+	transform:translateY(-0.2vh);
+	transform:translateY(-0vh);
+	box-shadow: 0vh 0.2vh 1px black;
+	color:black;
+	font-weight: lighter;
+	padding: 0.5% 0.3%;
+	transition: box-shadow 0.5s;
+	transition: border-width 0.3s;
+	transition: border-radius 0.2s;
+}
+/**/
     }
