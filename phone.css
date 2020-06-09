@@ -55,8 +55,8 @@ div.page {
 	box-shadow:0px 0px 5px;
     border:1px solid black;
 	position:relative;
-	top:21vmin;
-	width:99%;
+	top:10vh;
+	width:40vh;
 	height:100%;
 	text-align: left;
 }
@@ -80,19 +80,49 @@ overflow: scroll;
  	font-family: 
  }
 button {
-	background-color:rgb(177,177,177);
-	border-style:none;
-	box-shadow: 0px 2px 3px black;
+	outline:0;
+	border-radius: 0.1em;
+	background-color:white;
+	border-style:solid;
+	border-color:black;
+	border-size:0.1vh;
+	transform:translateY(-0.4vh);
+	box-shadow: 0vh 0.2vh 0.3vh black;
 	color:black;
 	font-weight: bold;
 	padding: 0.5% 0.3%;
+	transition: transform 0.5s;
+	transition: border-radius 0.2s;
 }
 button:hover {
-	background-color:rgb(177,177,177);
-	border-style:none;
-	box-shadow: 0px 0px 0px black;
-	transform: translateY(-2);
+	outline:0;
+	border-radius: 0.1em;
+	background-color:white;
+	border-style:solid;
+	border-color:black;
+	border-size:0.1vh;
+	transform:translateY(-0.4vh);
+	box-shadow: 0vh 0.2vh 0.3vh black;
 	color:black;
 	font-weight: bold;
 	padding: 0.5% 0.3%;
+	transition: transform 0.5s;
+	transition: border-radius 0.2s;
+}
+button:active {
+	outline:0;
+	background-color:white;
+	border-radius: 2.5em;
+	border-style:inset;
+	border-color:black;
+	border-width:0.1px;
+	transform:translateY(-0.2vh);
+	transform:translateY(-0vh);
+	box-shadow: 0vh 0.2vh 1px black;
+	color:black;
+	font-weight: lighter;
+	padding: 0.5% 0.3%;
+	transition: box-shadow 0.5s;
+	transition: border-width 0.3s;
+	transition: border-radius 0.2s;
 }
