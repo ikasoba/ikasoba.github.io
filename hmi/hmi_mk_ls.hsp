@@ -1,0 +1,13 @@
+title "hmi list maker"
+#include "include/hspinet.as"
+notesel list
+noteload "list.ls"
+	SetNkfOption "Lw"
+	NkfConvert   list,list
+/*
+module error dialog
+ikasoba.github.io/hmi/dl/
+mder.as
+モジュール用のエラーダイアログを追加します
+*/
+	noteadd ""+name+"\n"+url+"\n"+fname+"\n"+fdis,-1,0
