@@ -1,0 +1,71 @@
+screen 0,525,525
+mes "ƒ[ƒh’†...\n(c)ikasoba\n—V‚ñ‚Å‚­‚ê‚Ä‚ ‚è‚ª‚Æ‚§‚§‚§‚§‚§‚§‚§‚§‚§I\nikasoba.github.io"
+;mmload "C:\\Windows\\Media\\flourish.mid",1,1
+;mmplay 1
+screen 1,525,525
+buffer 0,25,25
+K=60
+logmes "ÃÚÃÚ¯ÃÃÚÃÚ-wwwww"
+repeat
+
+redraw 0
+pget x,y
+
+if ginfo_r=255 and ginfo_g=255 and ginfo_b=255:{
+color x*10,y*10,x*5+y*5
+pos x,y:pset
+pixel++
+}
+
+getkey a,37
+getkey w,38
+getkey d,39
+getkey s,40
+
+if time=1000:stime++:scoretime++:time=0
+if stime=60:mtime++:stime=0
+
+if keywait=k:{
+if w=1:{y-1}else:if a=1:{x-1}else:if s=1:{y+1}else:if d=1:{x+1}
+keywait=0
+	if x<0:{x+1}
+	if y<0:{y+1}
+	if x>25:{x-1}
+	if y>25:{y-1}
+	/************/
+	if x<25:{x+1}
+	if y<25:{y+1}
+	if x>0:{x-1}
+	if y>0:{y-1}
+}
+flg=0
+keywait++
+gsel 1
+if pixel!=625:score=pixel-scoretime
+title ""+stime+"•b"+mtime+"•ª/"+pixel+"pixel"+score+"score"
+redraw 0
+pos 0,0
+gzoom ginfo_winx,ginfo_winy,0,0,0,25,25
+color 255,0,255
+pos x*21,y*21:mes "œ"
+redraw 1
+gsel 0
+redraw 1
+await 1
+time++
+if score=-3:break
+if pixel=625:break
+loop
+if score=-3:goto *game_over
+gsel 1
+pos 0,0
+color 255,255,255
+mes "GAME CLEAR!\n_Ã¯ÃÃ-ww^"
+stop
+*game_over
+gsel 1
+color 0,0,0
+boxf
+pos 0,0
+color 255,255,255
+mes "GAME OVER!\n_ÃŞÃŞ°İw^"	
