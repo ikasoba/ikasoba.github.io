@@ -38,7 +38,7 @@ div.top-sub a:hover {
 	text-shadow:1px 1px 2px black;
 }
 <!--text css-->
-span,p,h1,h2,h3,h4,h5,h6{
+span,p,pre,h1,h2,h3,h4,h5,h6{
  font-family: 'Noto Sans JP', sans-serif;
  color:rgb(67,67,67);
 }
@@ -62,7 +62,7 @@ div.page {
 	box-shadow:0px 0px 5px;
     border:1px solid black;
 	position:relative;
-	top:9vmin;
+	top:10%;
 	width:99%;
 	height:100%;
 	text-align: left;
