@@ -1,41 +1,155 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-@font-face {
-	font-family: mochiypopEP;
-	src: url(font/MochiyPop-E-P.ttf) format("truetype");
-	 }
 * {
-	padding : 0px ;
-	margin: 0px;
+	padding:0.05em;
+	margin:0.05em;
 }
-h1.title a {
-font-family: mochiypop;
- text-decoration: none;
- margin: 0.25% ;
- color:white;
- text-shadow:1px 1px 2px white;
+html,body {
+	overflow-x:hidden;
+	padding:0;
+	margin:0;
+	height: 100%;
 }
-div.top {
-	position: fixed;
-	z-index: 1;
-	width:100%; height:auto;
-	background-color :rgb(67,67,67);
+.bg {
+	  background-color:	#008080;
 }
-
-div.top-sub a {
-	text-decoration: none;
-	margin: 0.25% ;
-	background-color :skyblue;
-	color :white;
-	transition: background-color 0.2s;
-	text-shadow:1px 1px 2px black;
+#start {
+	display: none;
 }
-div.top-sub a:hover {
-	text-decoration: none;
-	margin: 0.25% ;
-	background-color :#00a9ef;
-	color :white;
-	transition: background-color 0.5s;
-	text-shadow:1px 1px 2px black;
+div.hide {
+	display:none;
+	height:0;
+	opacity:0;
+}
+input#start:checked ~ div.hide {
+	position:fixed;
+	bottom:2.2em;
+	left:0;
+	height:auto;
+	opacity:1;
+	letter-spacing:0em;
+	text-align:center;
+	display: inline-block;
+	background-color:lightgrey;
+	border-style:outset;
+	border-color:white;
+	border-width:0.1em;
+	cursor:auto;
+}
+.home:before {
+	content: '';/*何も入れない*/
+	display: inline-block;/*忘れずに！*/
+	width:1.25em;/*画像の幅*/
+	height:1.25em;/*画像の高さ*/
+	background-image: url("icon.png");
+	background-size: contain;
+	vertical-align: middle;
+}
+.gh:before {
+	content: '';/*何も入れない*/
+	display: inline-block;/*忘れずに！*/
+	width:1.25em;/*画像の幅*/
+	height:1.25em;/*画像の高さ*/
+	background-image: url("img/github.png");
+	background-size: contain;
+	vertical-align: middle;
+}
+.tw:before {
+	content: '';/*何も入れない*/
+	display: inline-block;/*忘れずに！*/
+	width:1.25em;/*画像の幅*/
+	height:1.25em;/*画像の高さ*/
+	background-image: url("img/twitter.png");
+	background-size: contain;
+	vertical-align: middle;
+}
+#clock {
+	position:fixed;
+	letter-spacing:0em;
+	right:0;
+	text-align:center;
+	display: inline-block;
+	background-color:lightgrey;
+	border-style:inset;
+	border-color:white;
+	border-width:0.1em;
+	width:auto;
+	height:auto;
+}
+ul li {
+		letter-spacing:-2em;
+		list-style-type:none;
+		display: inline-block;
+		padding: 0px !important;
+		margin: 0px !important;
+}
+.sp {
+	position:fixed;
+	letter-spacing:0em;
+	right:;
+	text-align:center;
+	display: inline-block;
+	background-color:lightgrey;
+	border-style:outset;
+	border-color:white;
+	border-width:0.1em;
+	width:0.05em;
+	height:auto;
+}
+.sbutton {
+	color:rgb(67,67,67);
+	background-color:lightgrey;
+}
+.sbutton:hover {
+	color:white;
+	background-color:blue;
+}
+.start {
+		letter-spacing:0em;
+	text-align:center;
+	background-color:lightgrey;
+	border-style:outset;
+	border-color:white;
+	border-width:0.1em;
+	width:auto;
+	height:auto;
+}
+.start:hover {
+	/*背景*/
+	border-style:inset;
+	cursor:pointer;
+}
+.button {
+	/*背景*/
+	letter-spacing:0em;
+	text-align:center;
+	display: inline-block;
+	background-color:lightgrey;
+	border-style:outset;
+	border-color:white;
+	border-width:0.1em;
+	width:auto;
+	height:auto;
+}
+.button:hover {
+	/*背景*/
+	border-style:inset;
+	cursor:pointer;
+}
+.footer {
+	position:fixed;
+	left:0;
+	bottom:0;
+	margin: 0em;
+	padding: 0em;
+	width:100%;
+	height:2.2em;
+		border-style:outset;
+	border-color:white;
+	border-width:0.1em;
+	border-left:0;
+	border-right:0;
+	border-bottom:0;
+	background-color:lightgrey;
 }
 <!--text css-->
 span,p,pre,h1,h2,h3,h4,h5,h6{
@@ -45,9 +159,10 @@ span,p,pre,h1,h2,h3,h4,h5,h6{
 a {
 	font-family: 'Noto Sans JP', sans-serif;
 	color:rgb(67,67,67);
+	text-decoration: none;
 	transition: color 0.2s;
 }
-a:hover {
+a._hv:hover {
 	font-family: 'Noto Sans JP', sans-serif;
 	color:rgb(47,47,255);
 	transition: color 0.5s;
@@ -55,22 +170,6 @@ a:hover {
 img {
 	width: 100%;
 	height:100%;
-}
-<!---->
-div.page {
-	padding: 0.1em;
-	box-shadow:0px 0px 5px;
-    border:1px solid black;
-	position:relative;
-	top:50%;
-	width:99%;
-	height:100%;
-	text-align: left;
-}
-div.page * {
-	margin: 0.5%;
-	margin-top: 0%;
-	margin-bottom: 0%;
 }
 pre.code {
 	font-size:1.3em;
@@ -83,53 +182,4 @@ max-height: 15em;
 color:white;
 overflow: scroll;
 }
-button {
-	outline:0;
-	border-radius: 0.1em;
-	background-color:white;
-	border-style:solid;
-	border-color:black;
-	border-size:0.1vh;
-	transform:translateY(-0.4vh);
-	box-shadow: 0vh 0.2vh 0.3vh black;
-	color:black;
-	font-weight: bold;
-	padding: 0.5% 0.3%;
-	transition: transform 0.5s;
-	transition: border-radius 0.2s;
-}
-button:hover {
-	outline:0;
-	background-color:white;
-	border-radius: 1em;
-	border-style:inset;
-	border-color:black;
-	border-size:0.1vh;
-	transform:translateY(-0.2vh);
-	transform:translateY(-0vh);
-	box-shadow: 0vh 0.2vh 0.3vh black;
-	color:black;
-	font-weight: bold;
-	padding: 0.5% 0.3%;
-	transition: transform 0.5s;
-	transition: border-radius 0.2s;
-}
-button:active {
-	outline:0;
-	background-color:white;
-	border-radius: 2.5em;
-	border-style:inset;
-	border-color:black;
-	border-width:0.1px;
-	transform:translateY(-0.2vh);
-	transform:translateY(-0vh);
-	box-shadow: 0vh 0.2vh 1px black;
-	color:black;
-	font-weight: lighter;
-	padding: 0.5% 0.3%;
-	transition: box-shadow 0.5s;
-	transition: border-width 0.3s;
-	transition: border-radius 0.2s;
-}
 /**/
-    }
