@@ -8,18 +8,52 @@
 		<link rel="shortcut icon" href="icon.png">
 		<link rel="apple-touch-icon" href="icon.png">
 		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width:1024px)" href="phone.css">
-		<link rel="stylesheet" type="text/css" media="screen and (min-device-width:1280px)" href="pc.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-device-width:1025px)" href="pc.css">
 		<script type="text/javascript" src="clock.js"></script>
+		<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $( ".window" ).draggable();
+  } );
+</script>
 	</head>
-	<body class="bg">
+	<body class="bg" id="root">
+  <div class="window">
+  	  <p class="title">タイトル</p>
+  	<div class="wmain">
+  		<input type=button disabled=disabled value="hoge">
+  		<input type=text disabled=disabled value="fuga">
+  		<br>
+  		<input type=button value="hoge">
+  		<input type=text value="fuga">
+	</div>
+  </div>
+    <div class="window">
+  	  <p class="title">タイトル</p>
+  	<div class="wmain">
+  		<p class="sbutton">1234567890</p>
+	</div>
+  </div>
 	<div class="footer">
 		<ul>
 			<li>
 				<span class="start"><label for="start" class="home">start</label><input class="start" id="start" type="checkbox"></input><div class="hide">
-						<p class="sbutton">0</p>
-						<p class="sbutton">1</p>
-						<p class="sbutton">2</p>
-						<p class="sbutton">3</p>
+					<div class="blue"></div>
+					<div class="start_content">
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+						<p class="sbutton">ボタンじゃないよ！</p>
+					</div>
 					</div></span>
 				<span class="button"><a class="gh" href="https://github.com/ikasoba">Github</a></span>
 				<span class="button"><a class="tw" href="https://twitter.com/ikasoba000">Twitter</a></span>

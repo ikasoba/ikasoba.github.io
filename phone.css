@@ -34,6 +34,7 @@ input#start:checked ~ div.hide {
 	border-color:white;
 	border-width:0.1em;
 	cursor:auto;
+	height:30%;
 }
 .home:before {
 	content: '';/*何も入れない*/
@@ -183,3 +184,75 @@ color:white;
 overflow: scroll;
 }
 /**/
+/*右クリ*/
+div.window {
+	position: relative;
+  	text-align:left;
+	letter-spacing:0em;
+	background-color:lightgrey;
+	border-style:outset;
+	border-color:white;
+	border-width:0.1em;
+	width:30%;
+	height:35%;
+  }
+div.wmain {
+	margin-top:0.25em;
+  	text-align:left;
+	letter-spacing:0em;
+	background-color:white;
+	border-style:inset;
+	border-color:white;
+	border-width:0.1em;
+	width:;
+	height:;
+}
+p.title {
+background: linear-gradient(225deg,lightskyblue,dodgerblue);
+width:auto;
+color:white;
+}
+.blue {
+	display:inline-block;
+	position:relative;
+	left:0;
+	bottom:0;
+	background-color:blue;
+	height:100%;
+	width:1.5em;
+	writing-mode:sideways-lr;
+	color:white;
+}
+.start_content {
+	position:relative;
+	display:inline-block;
+	top:-1rem;
+	right:0rem;
+
+}
+input[type=button] {
+  	text-align:center;
+	letter-spacing:0em;
+	background-color:lightgray;
+	border-style:outset;
+	border-color:white;
+	border-width:0.1rem;
+}
+input[type=text] {
+  	text-align:left;
+	letter-spacing:0em;
+	background-color:white;
+	border-style:inset;
+	border-color:white;
+	border-width:0.1rem;
+}
+input[disabled=disabled] {
+	background-color:lightgray;
+	color:gray;
+	text-shadow:1px 1px white;
+}
+input[type=button]:active {
+	outline:none;
+	border-style:inset;
+}
+input {outline:none;}
