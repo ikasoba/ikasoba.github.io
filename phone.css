@@ -97,8 +97,8 @@ overflow: scroll;
 	border-style:outset;
 	border-color:white;
 	border-width:0.1em;
-	width:100%;
-	height:100%;
+	width:100vw;
+	height:100vh;
   }
 div.page {
 	position:relative;
@@ -109,7 +109,7 @@ div.page {
 	border-style:inset;
 	border-color:white;
 	border-width:0.1em;
-	width:;
+	width:auto;
 	height:100%;
 }
 .title {
