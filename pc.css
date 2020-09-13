@@ -45,7 +45,7 @@ html,body {
 	text-align:center;
 	display: inline-block;
 	background-color:lightgrey;
-	border-style:outset;
+	border-style:ridge;
 	border-color:white;
 	border-width:0.1em;
 	width:auto;
@@ -67,7 +67,7 @@ a {
 	text-decoration: none;
 	transition: color 0.2s;
 }
-a._hv:hover {
+a:hover {
 	font-family: 'Noto Sans JP', sans-serif;
 	color:rgb(47,47,255);
 	transition: color 0.5s;
@@ -87,7 +87,6 @@ max-height: 15em;
 color:white;
 overflow: scroll;
 }
-/**/
 /*右クリ*/
 .main {
   	text-align:left;
@@ -95,11 +94,6 @@ overflow: scroll;
 	background-color:lightgrey;
 	width:100vw;
 	height:100vh;
-  }
-  .aaa {
-	height:100%;
-	width:100%;
-	background-color:lightgrey;
   }
 div.page {
 	display:block;
@@ -110,19 +104,31 @@ div.page {
   	text-align:left;
 	letter-spacing:0rem;
 	background-color:white;
-	border-style:inset;
+	border-style:solid;
 	border-radius:0.5rem;
 	border-color:white;
 	border-width:0.13rem;
-	width:97.5%;
-	height:100vh;
+	width:auto;
+	height:100%;
+}
+.notif:before {
+	content:url("img/notif.png");
+}
+.notif {
+	background-color:yellow;
+	border-style:solid;
+	border-color:yellow;
+	border-width:0.13rem;
+	background-color:yellow;
+	color:black;
+	font-size:2rem;
 }
 
 .title {
 	display:block;
 	font-size:1.5em;
 		background-color:lightgrey;
-	border-style:inset;
+	border-style:solid;
 	border-color:white;
 	border-width:0.13rem;
 width:auto;
@@ -134,14 +140,15 @@ input[type=button] {
 	background-color:lightgray;
 	border-style:outset;
 	border-color:white;
+	border-radius:0.25rem;
 	border-width:0.1rem;
 }
 input[type=text] {
   	text-align:left;
 	letter-spacing:0em;
 	background-color:white;
-	border-style:inset;
-	border-color:white;
+	border-style:ridge;
+	border-color:black;
 	border-width:0.1rem;
 }
 input[disabled=disabled] {
@@ -151,6 +158,6 @@ input[disabled=disabled] {
 }
 input[type=button]:active {
 	outline:none;
-	border-style:inset;
+	border-style:ridge;
 }
 input {outline:none;}

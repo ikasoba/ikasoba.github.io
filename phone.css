@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 * {
-	padding:0.05em;
-	margin:0.05em;
+	padding:0em;
+	margin:0em;
 }
 html,body {
 	overflow-x:hidden;
@@ -90,34 +90,47 @@ overflow: scroll;
 /**/
 /*右クリ*/
 .main {
-	position:fixed;
   	text-align:left;
-	letter-spacing:0em;
+	letter-spacing:0rem;
 	background-color:lightgrey;
-	border-style:outset;
-	border-color:white;
-	border-width:0.1em;
 	width:100vw;
 	height:100vh;
   }
+  .aaa {
+	height:100%;
+	width:100%;
+	background-color:lightgrey;
+  }
 div.page {
-	position:relative;
-	margin-top:0.25em;
+	display:block;
+	margin-top:0.15rem;
+	margin-right:0.3rem;
+	margin-left:0.3rem;
+	margin-bottom:0.3rem;
   	text-align:left;
-	letter-spacing:0em;
+	letter-spacing:0rem;
 	background-color:white;
 	border-style:inset;
+	border-radius:0.5rem;
 	border-color:white;
-	border-width:0.1em;
-	width:auto;
-	height:100%;
+	border-width:0.13rem;
+	width:97.5%;
+	height:100vh;
 }
+.notif {
+	background-color:yellow;
+	color:black;
+}
+
 .title {
 	display:block;
 	font-size:1.5em;
-background: linear-gradient(225deg,lightskyblue,dodgerblue);
+		background-color:lightgrey;
+	border-style:inset;
+	border-color:white;
+	border-width:0.13rem;
 width:auto;
-color:white;
+color:black;
 }
 input[type=button] {
   	text-align:center;
