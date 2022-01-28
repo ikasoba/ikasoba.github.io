@@ -4,6 +4,7 @@ markdown: kramdown
 timezone: japan/tokyo
 lang: ja
 permalink: /:categories/:year/:month/:day/:title:output_ext
-url: 192.168.0.4:4000
+url: https://ikasoba.github.io
+domain: ikasoba.github.io
 kramdown:
   syntax_highlighter: rouge
