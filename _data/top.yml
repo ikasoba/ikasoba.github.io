@@ -1,5 +1,6 @@
 head: |-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
+    <div id="kiriban" />
     <script>(async()=>{
         localforage.config({
             driver: localforage.INDEXEDDB,
@@ -10,6 +11,6 @@ head: |-
             k=await localforage.getItem("kiri")
         }catch{}
         localforage.setItem("kiri",k+1)
-        document.currentScript.outerHTML=`[${k}]`
+        document.querySelector("#kiriban").innerText=`[${k}]`
     })()</script>
     <span class="blink">キリ番踏んだ人は掲示板で報告してください！踏み逃げ厳禁！</span>
