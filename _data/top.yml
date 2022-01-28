@@ -1,6 +1,6 @@
 head: |-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
-    <div id="kiriban" />
+    <div id="kiriban"></div>
     <script>(async()=>{
         localforage.config({
             driver: localforage.INDEXEDDB,
