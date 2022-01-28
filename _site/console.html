@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>console</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='console.css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js"></script>
+  <script src='console/sys.js'></script>
+  <script src='console.js'></script>
+</head>
+<body>
+  <div id="main">
+    <span id="txt"></span>
+    <div id="cursor"></div>
+    <form id="input_box" onsubmit="return false">
+      <input autocomplete="off" type="text" id="con">
+    </form>
+    <script>genLine()</script>
+  </div>
+</body>
+</html>

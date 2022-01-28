@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{site.lang}}">
+<head>
+  <meta charset='utf-8'>
+  <title>{{site.name}} - {{page.title}}</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="shortcut icon" href="/img/icon.png">
+  <link rel="apple-touth-icon" href="/img/icon.png">
+
+  <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/css/syntax.css'>
+  <script src='/main.js'></script>
+
+  <!-- OGP -->
+  <meta property="og:url" content="{{site.url}}{{page.url}}" />
+  <meta property="og:title" content="{{page.title}}" />
+  {{ page.HTMLhead }}
+</head>
+<body>
+  <div id="side_menu">
+    {% include menu.html %}
+  </div>
+  <div id="main">
+    <div class="title_wrap">
+      <div class="title">
+        <h1 style="font-family: serif;">ようこそ！{{site.name}}へ！</h1>
+      </div>
+    </div>
+    <ul class="menu">
+      <li>カテゴリ:</li>
+      {% for categorie in page.categories %}
+        <li>{{categorie}}</li>
+      {% endfor %}
+    </ul>
+    {% include head.html %}
+    <script>time()</script>
+    <div class="content">
+      <div style="display: flex;">
+        <time datetime="{{page.date | date_to_xmlschema}}">{{page.date | date: "%Y/%m/%d"}}</time>
+        <span class="author blink">{{page.author}}</span>
+      </div>
+      <h1 style="width: 100%;text-align: center;">
+        {{page.title}}
+      </h1>
+      {{content}}
+    </div>
+    {{page.next}}
+    {{page.previous}}
+  </div>
+</body>
+</html>
