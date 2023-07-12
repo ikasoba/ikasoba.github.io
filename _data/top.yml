@@ -8,7 +8,7 @@ head: |-
         });
         let k=0
         try {
-            k=await localforage.getItem("kiri")
+            k &&= await localforage.getItem("kiri")
         }catch{}
         localforage.setItem("kiri",k+1)
         document.querySelector("#kiriban").innerText=`[${k}]`
