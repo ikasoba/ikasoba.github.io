@@ -1,0 +1,125 @@
+body {
+  height: 100vh;
+  margin: 0;
+
+  font-family: 'ＭＳ ゴシック', monospace;
+  background: navy;
+}
+
+.center {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.site-container {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  padding: 0.5rem 1rem;
+
+  overflow: auto;
+
+  border-right: lightgray ridge 8px;
+  background: rgb(131, 187, 178);
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0.5rem 0 1.5rem;
+
+  list-style: none;
+
+  gap: 0.5rem;
+}
+
+.site-content {
+  flex: 1;
+  height: 100%;
+
+  color: yellow;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-header {
+  border: 1rem solid red;
+  border-width: 1rem 0;
+  background: black;
+
+  color: cyan;
+  font-family: "ＭＳ 明朝", sans-serif;
+  font-style: italic;
+}
+
+main {
+  height: 100%;
+
+  padding: 0.5rem;
+  margin: 0.5rem;
+
+  border: 1rem double lime;
+}
+
+@keyframes marquee {
+  0% {
+    position: relative;
+    left: -50%;
+  }
+
+  100% {
+    position: relative;
+    left: 150%;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  49.99% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  background: #bbb;
+  width: 1rem;
+}
+
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-button {
+  background: lightgray;
+  border: 0.125rem outset white;
+  border-right-color: #aaa;
+  border-bottom-color: #aaa;
+}
+
+::-webkit-scrollbar-button:active {
+  background: lightgray;
+  border: 0.125rem inset white;
+}
