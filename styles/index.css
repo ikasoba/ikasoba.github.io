@@ -76,6 +76,18 @@ main {
   border: 1rem double lime;
 }
 
+main a {
+  color: cyan;
+
+  &:visited {
+    color: cyan;
+  }
+
+  &:hover {
+    color: yellow;
+  }
+}
+
 @keyframes marquee {
   0% {
     position: relative;

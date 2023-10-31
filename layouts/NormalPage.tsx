@@ -12,7 +12,7 @@ export default (function NormalPage({ data, children }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
-          {data.title ? `いかそばの部屋 - ${data.title}` : "いかそばの部屋"}
+          {data.title ? `${data.title} - いかそばの部屋` : "いかそばの部屋"}
         </title>
         <link rel="stylesheet" href={`${projectRoot}/styles/index.css`} />
       </Head>
