@@ -18,6 +18,8 @@ body {
 .site-container {
   display: flex;
   height: 100%;
+
+  overflow: hidden;
 }
 
 .sidebar {
@@ -55,6 +57,8 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  overflow: auto;
 }
 
 .welcome-header {
@@ -68,12 +72,15 @@ body {
 }
 
 main {
-  height: 100%;
-
   padding: 0.5rem;
   margin: 0.5rem;
 
   border: 1rem double lime;
+}
+
+main > div {
+  height: 100%;
+  margin-bottom: 3rem;
 }
 
 main a {
@@ -85,6 +92,19 @@ main a {
 
   &:hover {
     color: yellow;
+  }
+}
+
+pre > code {
+  overflow: auto;
+  display: block;
+  padding: 0.5rem;
+}
+
+main {
+  & h1, h2, h3 {
+    padding-bottom: 0.125rem;
+    border-bottom: solid 1px yellow;
   }
 }
 
@@ -115,23 +135,4 @@ main a {
   100% {
     opacity: 0;
   }
-}
-
-::-webkit-scrollbar {
-  background: #bbb;
-  width: 1rem;
-}
-
-
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-button {
-  background: lightgray;
-  border: 0.125rem outset white;
-  border-right-color: #aaa;
-  border-bottom-color: #aaa;
-}
-
-::-webkit-scrollbar-button:active {
-  background: lightgray;
-  border: 0.125rem inset white;
 }
