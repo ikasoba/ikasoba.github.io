@@ -251,4 +251,5 @@ function replaceChildren(parent: Node, offset: number, count: number, newChildre
 
 # いかがでしたか？
 
-今回はなんとなく、フロントエンドフレームワークを自作するのに役に立ちそうな情報をまとめてみました。
+今回はなんとなく、フロントエンドフレームワークを自作するのに役に立ちそうな情報をまとめてみました。<br/>
+最後に、リポジトリにstarをくださったsanaoさんに感謝申し上げます。
