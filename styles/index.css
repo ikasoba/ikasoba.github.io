@@ -108,6 +108,15 @@ main {
   }
 }
 
+table {
+  border: solid 1px lime;
+
+  & td, th {
+    border: solid 1px lime;
+    padding: 0.25rem;
+  }
+}
+
 @keyframes marquee {
   0% {
     position: relative;
@@ -119,6 +128,7 @@ main {
     left: 150%;
   }
 }
+
 @keyframes blink {
   0% {
     opacity: 1;

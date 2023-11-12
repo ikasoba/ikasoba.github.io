@@ -26,13 +26,14 @@ https://github.com/ikasoba/ofuro-js
 
 # JSXについて
 
-TypeScriptでは、JSXに対しても型付けができます。
-
-この記事では `react-jsx` として説明していきます。
+得られた知見としてJSXのことを書いていきます。
+`react-jsx` でコンパイルされるものとして書いていきます。
 
 ## 大体こんな感じ
 
-`<oackage>/jsx-runtime` としてインポートできるならコードの場所はどこでも良いです。
+TypeScriptでは、JSXに対しても型付けができます。
+
+JSX用のコードが `<oackage>/jsx-runtime` としてインポートできことが第１条件です。
 
 ```ts
 // JSXというモジュールからJSXの型付けが行われる
@@ -97,7 +98,7 @@ class Hoge {
 }
 ```
 
-ElementAttributesPropertyで指定したキーと、Hogeのpiyoプロパティが対応しているので、
+`ElementAttributesProperty`で指定したキーと、Hogeのpiyoプロパティが対応しているので、
 上のようなの定義をすると良いです。ちゃんと型推論もされますよ。
 
 また、`ElementAttributesProperty` で指定したキーへの値の割当は `jsx` 関数などで実装しておく必要があります。
@@ -206,7 +207,7 @@ jsxs(..., {
 function jsxDEV(type: string | Component, props: ..., key?: any, source: ..., self: any): JSX.Element;
 ```
 
-### `source`引数
+### 引数 `source`
 
 これは以下のような型の値が渡されるようです。
 ```ts
@@ -217,15 +218,61 @@ function jsxDEV(type: string | Component, props: ..., key?: any, source: ..., se
 }
 ```
 
-### `self`引数
+### 引数 `self`
 
 これは、呼び出し元の`this`が渡されます。
 
+# 実装した主なフック
+
+今回自作したフロントエンドフレームワークでは、以下のフックを実装しました。
+
+## signal
+
+状態を保持するためのフックの一つです。
+Stateに比べて実装が楽そうだと判断したので今回はこちらを実装しました。
+
+Signalの値が変更された時に呼び出されるイベントハンドラーと、その値を持っています。
+
+## useEffect
+
+生成されたSignalを保持しておくことで依存しているフックの収集を自動で行えるようにしました。
+
+## computed
+
+参照しているSignalが変更された時にDOMへ変更を反映させるフックです。
+
+一度、計算してから参照されたSignalを保持しておくことで自動で依存しているSignalを保持するようにしました。
+
+# サーバーサイドレンダリング
+
+サーバーサイドレンダリングをするためにdeno_domを使用しました。
+
+使用するDOM APIをグローバルに保持しておくことで、SSRとCSRの切り替えをできるようにしました。
+
+```tsx
+import { signal, computed } from "ofuro-js/mod.ts";
+import { render } from "ofuro-js/server.ts";
+
+function Counter() {
+  const count = signal(0);
+
+  return (
+    <button onClick={() => count.value++}>
+      count: {computed(() => count.value)}
+    </button>
+  );
+}
+
+console.log(
+  render(() => <Counter/>)
+);
+```
+
 # (おまけ) 要素の置換処理
 
-Reactの`useState`のような機構を作っている際に要素の置換をする必要があると思います。
+Reactの`useState`のような状態を保持する機構を作っている際、変更を反映させるために要素の置換をする必要があると思います。
 
-要素の置換は [`Node#replaceChild`](https://developer.mozilla.org/ja/docs/Web/CSS/::-webkit-scrollbar) で出来ます。
+その要素の置換は [`Node#replaceChild`](https://developer.mozilla.org/ja/docs/Web/API/Node/replaceChild) というAPIで行えます。
 
 以下はsplice感覚で要素を置換する関数の例です。
 ```ts
@@ -249,6 +296,6 @@ function replaceChildren(parent: Node, offset: number, count: number, newChildre
 }
 ```
 
-# いかがでしたか？
+# さいごに
 
 今回はなんとなく、フロントエンドフレームワークを自作するのに役に立ちそうな情報をまとめてみました。
