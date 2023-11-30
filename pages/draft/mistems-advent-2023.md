@@ -312,3 +312,5 @@ console.log(
 以上、[いかそば](https://misskey.systems/@ikasoba)の記事でした。
 
 12/6の記事は[みのかわ](https://misskey.systems/@minokavva)さんの[記事](https://adventar.org/calendars/8601#:~:text=ECHONET%20Lite%E3%81%A8Grafana%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A0%E8%A9%B1%E3%82%92%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%99)です。楽しみですね。
+
+最後に、リポジトリにstarをくださったsanaoさんに感謝申し上げます。
