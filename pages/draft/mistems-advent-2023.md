@@ -71,6 +71,9 @@ export const jsxs = ...;
 
 ## `ElementAttributesProperty` について
 
+この型で指定されてるキー名がクラスコンポーネントの属性の型の指定に使われます。
+キーに対する値の型がどんなものでも `コンポーネント[<キー名>]` の型が参照されるのが特徴です。
+
 ややこしいと思うので実践形式で補足していきます。
 
 ```ts
@@ -99,7 +102,12 @@ class Hoge {
 ```
 
 `ElementAttributesProperty`で指定したキーと、Hogeのpiyoプロパティが対応しているので、
-上のようなの定義をすると良いです。ちゃんと型推論もされますよ。
+上のようなの定義をします。
+
+```ts
+<Hoge fuga="..." />
+```
+このコードで割り当てられてるコンポーネントのpropsがpiyoに代入されます。
 
 また、`ElementAttributesProperty` で指定したキーへの値の割当は `jsx` 関数などで実装しておく必要があります。
 
@@ -218,9 +226,12 @@ function jsxDEV(type: string | Component, props: ..., key?: any, source: ..., se
 }
 ```
 
-### 引数 `self`
+---
 
-これは、呼び出し元の`this`が渡されます。
+実装する上でJSXの型付けについて上記のような知識が得られました。
+
+次は実装したフックの解説に移ります。
+
 
 # 実装した主なフック
 
@@ -233,9 +244,21 @@ Stateに比べて実装が楽そうだと判断したので今回はこちらを
 
 Signalの値が変更された時に呼び出されるイベントハンドラーと、その値を持っています。
 
+```tsx
+function Counter() {
+  const count = signal(0);
+
+  return (
+    <button onClick={() => count.value++}>
+      count: {count}
+    </button>
+  );
+}
+```
+
 ## useEffect
 
-生成されたSignalを保持しておくことで依存しているフックの収集を自動で行えるようにしました。
+コンポーネント内で生成されたSignalを保持しておくことで依存しているフックの収集を自動で行えるようにしました。
 
 ## computed
 
@@ -243,11 +266,23 @@ Signalの値が変更された時に呼び出されるイベントハンドラ�
 
 一度、計算してから参照されたSignalを保持しておくことで自動で依存しているSignalを保持するようにしました。
 
+```tsx
+function Counter() {
+  const count = signal(0);
+
+  return (
+    <button onClick={() => count.value++}>
+      count: {computed(() => count.value * 2)}
+    </button>
+  );
+}
+```
+
 # サーバーサイドレンダリング
 
-サーバーサイドレンダリングをするためにdeno_domを使用しました。
+サーバーサイドレンダリングをするために `deno_dom` を使用しました。
 
-使用するDOM APIをグローバルに保持しておくことで、SSRとCSRの切り替えをできるようにしました。
+これらは、内部で使用しているdom apiを`render`内で`deno_dom`へ置き換えることで実現しました。
 
 ```tsx
 import { signal, computed } from "ofuro-js/mod.ts";
@@ -268,34 +303,12 @@ console.log(
 );
 ```
 
-# (おまけ) 要素の置換処理
-
-Reactの`useState`のような状態を保持する機構を作っている際、変更を反映させるために要素の置換をする必要があると思います。
-
-その要素の置換は [`Node#replaceChild`](https://developer.mozilla.org/ja/docs/Web/API/Node/replaceChild) というAPIで行えます。
-
-以下はsplice感覚で要素を置換する関数の例です。
-```ts
-function replaceChildren(parent: Node, offset: number, count: number, newChildren: Node[]) {
-  const prevNodes = [...parent.childNodes];
-
-  for (let i = 0; i < count || i < newChildren.length; i++) {
-    if (i < newChildren.length) {
-      const prevNode = i < count ? prevNodes[offset + i] : null;
-
-      if (prevNode) {
-        parent.replaceChild(newChildren[i], prevNode);
-      } else {
-        const afterNode = newChildren[i - 1]?.nextSibling ?? prevNodes[offset];
-        parent.insertBefore(newChildren[i], afterNode);
-      }
-    } else {
-      parent.removeChild(prevNodes[offset + i]);
-    }
-  }
-}
-```
-
 # さいごに
 
 今回はなんとなく、フロントエンドフレームワークを自作するのに役に立ちそうな情報をまとめてみました。
+
+12/13も記事を出すので良ければそちらも御覧ください！
+
+以上、[いかそば](https://misskey.systems/@ikasoba)の記事でした。
+
+12/6の記事は[みのかわ](https://misskey.systems/@minokavva)さんの[記事](https://adventar.org/calendars/8601#:~:text=ECHONET%20Lite%E3%81%A8Grafana%E3%81%A7%E9%81%8A%E3%82%93%E3%81%A0%E8%A9%B1%E3%82%92%E6%9B%B8%E3%81%8D%E3%81%BE%E3%81%99)です。楽しみですね。
