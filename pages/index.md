@@ -9,7 +9,7 @@ title: トップページ
 
 # 途中の記事
 
-- [OSSで僕がやってみたいこと](./draft/2023-12/yattemitai.md)
+- [O僕がやってみたいこと](./draft/2023-12/yattemitai.html)
 
 # 記事
 
