@@ -1,9 +1,9 @@
 ---
 layout: NormalPage.tsx
-title: OSSで僕がやってみたいこと
+title: 僕がやってみたいこと
 ---
 
-# 僕がOSSでやってみたいこと
+# 僕やってみたいこと
 
 いかそばです。僕は[Dejamu](https://github.com/ikasoba/dejamu)というOSSを作っています。
 

@@ -7,7 +7,11 @@ title: トップページ
 
 適当に近況とかを書き足して行こうかな(´・ω・｀)
 
-# 書き途中の記事
+# 途中の記事
+
+- [OSSで僕がやってみたいこと](./draft/2023-12/yattemitai.md)
+
+# 記事
 
 - [フロントエンドフレームワークを自作してみた話](./draft/mistems-advent-2023.html)
 - [misskeyのOauth2.0認可について・・・お話します・・・](./draft/misskey-oauth2.html)
