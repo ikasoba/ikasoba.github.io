@@ -38,6 +38,11 @@ export default (function NormalPage({ data, children }) {
               {children}
             </Markdown>
           </main>
+          <footer>
+            <p className="center">
+              誤字・脱字の修正、記事の追加等は <a href="https://github.com/ikasoba/ikasoba.github.io">こちら</a> へプルリクエストをお送りくださいな
+            </p>
+          </footer>
         </div>
       </div>
       <StarEffectProvider />
