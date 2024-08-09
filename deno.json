@@ -1,12 +1,12 @@
 {
   "lock": false,
   "tasks": {
-    "dejamu": "echo \"import 'dejamu/cli/cli.ts';\" | deno run -A -",
+    "dejamu": "echo \"import 'dejamu/cli/cli.ts';\" | deno run -A --reload -",
     "build": "deno task dejamu build",
     "serve": "deno task dejamu serve"
   },
   "imports": {
-    "dejamu/": "https://raw.githubusercontent.com/ikasoba/dejamu/0.0.24/"
+    "dejamu/": "https://raw.githubusercontent.com/ikasoba/dejamu/0.0.25/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
