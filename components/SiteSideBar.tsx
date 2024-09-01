@@ -1,5 +1,6 @@
 import { asset } from "dejamu/comptime.ts";
 import { BannerCopyButton } from "./BannerCopyButton.islands.tsx";
+import { assert } from "https://deno.land/std@0.201.0/assert/assert.ts";
 
 export default function SiteSideBar() {
   return (
@@ -51,6 +52,21 @@ export default function SiteSideBar() {
           <br />
           <a href="https://github.com/ikasoba/ikasoba.github.io/issues/new?labels=&projects=&template=%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%83%90%E3%83%8A%E3%83%BC.md&title=Link+Request%3A+%E7%9B%B8%E4%BA%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%83%90%E3%83%8A%E3%83%BC%E3%81%AE%E7%94%B3%E8%BE%BC%E3%81%BF">
             <small>相互リンク募集中</small>
+          </a>
+          <br />
+        </li>
+        <small title="管理人の友人が所有するホームページへのリンクです ٩(๑òωó๑)۶">
+          ◇ 相互リンク ◇
+        </small>
+        <li>
+          <a title="CAT5のホームページ" href="https://nyago.tech">
+            <img
+              width="110"
+              height="32.5"
+              src={asset(
+                "https://nyago.tech/assets/img/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png",
+              )}
+            />
           </a>
           <br />
         </li>
