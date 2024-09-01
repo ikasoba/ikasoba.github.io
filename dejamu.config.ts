@@ -18,9 +18,6 @@ export default {
         }),
       ],
     }),
-    PostCssPlugin([".css"], [
-      cssnano({ preset: "default" }) as any,
-      autoprefixer() as any,
-    ]),
+    PostCssPlugin([".css"], [cssnano({ preset: "default" }), autoprefixer()]),
   ],
 } satisfies Config;

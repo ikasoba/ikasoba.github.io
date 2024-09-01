@@ -2,8 +2,13 @@ body {
   height: 100vh;
   margin: 0;
 
-  font-family: 'ＭＳ ゴシック', monospace;
   background: navy;
+
+  font-family: 'ＭＳ ゴシック', monospace;
+
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: none;
 }
 
 .center {
@@ -67,7 +72,7 @@ body {
   background: black;
 
   color: cyan;
-  font-family: "ＭＳ 明朝", sans-serif;
+  font-family: "ＭＳ 明朝", serif;
   font-style: italic;
 }
 
@@ -79,11 +84,10 @@ main {
 }
 
 main > div {
-  height: 100%;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
-main a {
+main a, footer a {
   color: cyan;
 
   &:visited {
@@ -92,6 +96,14 @@ main a {
 
   &:hover {
     color: yellow;
+  }
+
+  &:not([href^="/"], [href^="./"], [href^="../"])::before, &[target="_blank"]::before {
+    content: "🗗";
+    font-size: 0.75em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.125rem;
   }
 }
 
@@ -152,4 +164,13 @@ footer {
   100% {
     opacity: 0;
   }
+}
+
+.tablelayout-base {
+  height: 100vh;
+  border: none;
+}
+
+.tablelayout-base td {
+  border: none;
 }
