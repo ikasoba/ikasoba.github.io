@@ -52,10 +52,10 @@ export default function SiteSideBar() {
           <br />
         </li>
         <small title="管理人の友人が所有するホームページへのリンクです ٩(๑òωó๑)۶">
-          ◇ 相互リンク ◇
+          ◇ リンク集 ◇
         </small>
         <li>
-          <a title="CAT5のホームページ" href="https://nyago.tech">
+          <a title="CAT5のホームページ" href="https://cat5.netlify.app">
             <img
               width="110"
               height="32.5"

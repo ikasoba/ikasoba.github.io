@@ -24,19 +24,7 @@ export default (function NormalPage({ data, children, path }) {
         />
       </Head>
       <div className="site-container">
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: '<table class="tablelayout-base">',
-          }}
-        />
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: '<td align="center" valign="top">',
-          }}
-        />
         <SiteSideBar />
-        <noscript dangerouslySetInnerHTML={{ __html: "</td>" }} />
-        <noscript dangerouslySetInnerHTML={{ __html: "<td>" }} />
         <div className="site-content">
           <header>
             <Marquee duration="10s" className="welcome-header">
@@ -91,8 +79,6 @@ export default (function NormalPage({ data, children, path }) {
             </small>
           </footer>
         </div>
-        <noscript dangerouslySetInnerHTML={{ __html: "</td>" }} />
-        <noscript dangerouslySetInnerHTML={{ __html: "</table>" }} />
       </div>
       <StarEffectProvider />
     </>
