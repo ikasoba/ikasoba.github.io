@@ -13,6 +13,7 @@ title: トップページ
 - [misskeyのOauth2.0認可について・・・お話します・・・](./draft/misskey-oauth2.html)
 - [あけおめ](./draft/2025-01/04-akeome.html)
 - [自作 OS と壁の落書き](./draft/2025-01/05-jisaku-os.html)
+- [脳直](./draft/2025-03/05-nikki.html)
 
 # つぶやき
 
