@@ -60,7 +60,7 @@ export default function SiteSideBar() {
               width="110"
               height="32.5"
               src={asset(
-                "https://nyago.tech/assets/img/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png",
+                'https://cat5.netlify.app/assets/img/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png',
               )}
             />
           </a>
