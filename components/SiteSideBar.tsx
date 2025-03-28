@@ -3,7 +3,7 @@ import { BannerCopyButton } from "./BannerCopyButton.islands.tsx";
 
 export default function SiteSideBar() {
   return (
-    <div aria-role="navigation" className="sidebar">
+    <div role="navigation" className="sidebar">
       ❏ めにゅ～ ❏
       <ul className="sidebar-menu">
         <li>
