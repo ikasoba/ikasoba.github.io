@@ -66,6 +66,12 @@ export default function SiteSideBar() {
           </a>
           <br />
         </li>
+        <li>
+          <a title="Pikutsuki Meteor" href="https://piyopuffin.github.io/meteor/" target="_blank" rel="noopener">
+            <img src={asset("https://piyopuffin.github.io/meteor/banner.svg")} width="190" height="40" alt="Pikutsuki Meteor" />
+          </a>
+           <br />
+        </li>
       </ul>
     </div>
   );
