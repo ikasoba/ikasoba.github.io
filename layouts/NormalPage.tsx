@@ -42,7 +42,7 @@ export default (function NormalPage({ data, children, path }) {
               </Blink>
             </p>
           </header>
-          <main>
+          <main role="main">
             <Markdown>
               {children}
             </Markdown>
