@@ -1,6 +1,5 @@
 import { asset } from "dejamu/comptime.ts";
 import { BannerCopyButton } from "./BannerCopyButton.islands.tsx";
-import { assert } from "https://deno.land/std@0.201.0/assert/assert.ts";
 
 export default function SiteSideBar() {
   return (
@@ -68,9 +67,14 @@ export default function SiteSideBar() {
         </li>
         <li>
           <a title="Pikutsuki Meteor" href="https://piyopuffin.github.io/meteor/" target="_blank" rel="noopener">
-            <img src={asset("https://piyopuffin.github.io/meteor/banner.svg")} width="190" height="40" alt="Pikutsuki Meteor" />
+            <img
+              src={asset("https://piyopuffin.github.io/meteor/banner.svg")}
+              width="110"
+              height="34.73"
+              alt="Pikutsuki Meteor"
+            />
           </a>
-           <br />
+          <br />
         </li>
       </ul>
     </div>
