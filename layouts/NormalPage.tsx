@@ -5,6 +5,7 @@ import StarEffectProvider from "../components/StarEffectProvider.islands.tsx";
 import SiteSideBar from "../components/SiteSideBar.tsx";
 import Marquee from "../components/Marquee.tsx";
 import Blink from "../components/Blink.tsx";
+import { asset } from "dejamu/comptime.ts";
 
 export default (function NormalPage({ data, children, path }) {
   const lastUpdated = Deno.statSync(path).mtime;
@@ -16,6 +17,7 @@ export default (function NormalPage({ data, children, path }) {
         <title>
           {data.title ? `${data.title} - いかそばの部屋` : "いかそばの部屋"}
         </title>
+        <link rel="icon" href={asset("/static/favicon.svg")} />
         <link rel="stylesheet" href={`${projectRoot}/styles/index.css`} />
         <link rel="schema.CC" href="http://web.resource.org/cc/" />
         <meta
