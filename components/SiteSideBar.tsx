@@ -54,12 +54,12 @@ export default function SiteSideBar() {
           ◇ 相互リンク ◇
         </small>
         <li>
-          <a title="CAT5のホームページ" href="https://cat5.netlify.app">
+          <a title="CAT5のホームページ" href="https://www.nekonet.cyou">
             <img
               width="110"
               height="32.5"
               src={asset(
-                'https://cat5.netlify.app/assets/img/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png',
+                'https://nekonet.cyou/assets/img/Links/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png',
               )}
             />
           </a>
