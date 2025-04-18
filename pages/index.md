@@ -14,6 +14,7 @@ title: トップページ
 - [あけおめ](./draft/2025-01/04-akeome.html)
 - [自作 OS と壁の落書き](./draft/2025-01/05-jisaku-os.html)
 - [脳直](./draft/2025-03/05-nikki.html)
+- [人生で一度しか食べてないもの](./draft/2025-04/18.md)
 
 # つぶやき
 
