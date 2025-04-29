@@ -7,7 +7,7 @@ import cssnano from "npm:cssnano";
 import autoprefixer from "npm:autoprefixer";
 
 export default {
-  entryPoints: ["pages/**/*.{jsx,tsx,md}", "styles/*.css"],
+  entryPoints: ["pages/**/*.md", "pages/**/*.{jsx,tsx}", "styles/*.css"],
   plugins: [
     PreactPlugin(),
     MarkdownPlugin({

@@ -1,6 +1,7 @@
 ---
 layout: NormalPage.tsx
 title: MisskeyのOAuth2.0認可について…お話します…
+timestamp: 2023/12/01
 ---
 
 # MisskeyのOAuth2.0認可について・・・お話します・・・
