@@ -22,6 +22,9 @@ export default function SiteSideBar() {
         <li>
           <a href="https://twitter.com/ikasoba000">★ﾂｲｯﾀｰ★</a>
         </li>
+        <li>
+          <a href={`${projectRoot}/atom.xml`}>★RSS★</a>
+        </li>
       </ul>
 
       ❏ バナー集 ❏

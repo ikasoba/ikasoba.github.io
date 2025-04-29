@@ -6,7 +6,7 @@
     "serve": "deno task dejamu serve"
   },
   "imports": {
-    "dejamu/": "https://raw.githubusercontent.com/ikasoba/dejamu/refs/tags/0.2.3/"
+    "dejamu/": "https://raw.githubusercontent.com/ikasoba/dejamu/refs/tags/0.2.4/"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
