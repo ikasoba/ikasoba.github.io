@@ -23,7 +23,7 @@ export default function SiteSideBar() {
           <a href="https://twitter.com/ikasoba000">★ﾂｲｯﾀｰ★</a>
         </li>
         <li>
-          <a href="https://ikasoba.tumblr.com/">★Thumblr★</a>
+          <a href="https://ikasoba.tumblr.com/">★Tumblr★</a>
         </li>
         <li>
           <a href={`${projectRoot}/atom.xml`}>★RSS★</a>
