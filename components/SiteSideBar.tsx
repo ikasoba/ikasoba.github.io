@@ -82,6 +82,18 @@ export default function SiteSideBar() {
           </a>
           <br />
         </li>
+        <li>
+          <a href="https://senju-museum.vercel.app/" target="_blank">
+            <img
+              alt="先住民の歴史博物館"
+              loading="lazy"
+              width="110"
+              height="34.375"
+              decoding="async"
+              src={asset("https://senju-museum.vercel.app/images/%E5%85%88%E4%BD%8F%E6%B0%91%E3%81%AE%E6%AD%B4%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A4%A8.png")}
+            />
+          </a>
+        </li>
       </ul>
     </div>
   );
