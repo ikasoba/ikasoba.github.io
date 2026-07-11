@@ -65,7 +65,7 @@ export default function SiteSideBar() {
               width="110"
               height="32.5"
               src={asset(
-                'https://nekonet.cyou/assets/img/Links/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png',
+                'https://nekonet.cyou/img/Links/CAT5%E3%83%90%E3%83%8A%E3%83%BC.png',
               )}
             />
           </a>
