@@ -98,7 +98,7 @@ main a, footer a {
     color: yellow;
   }
 
-  &:not([href^="/"], [href^="./"], [href^="../"])::before, &[target="_blank"]::before {
+  &:not([href^="/"], [href^="./"], [href^="../"], [href^="#"])::before, &[target="_blank"]::before {
     content: "🗗";
     font-size: 0.75em;
     text-align: center;
